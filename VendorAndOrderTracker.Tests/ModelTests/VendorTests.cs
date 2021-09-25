@@ -1,9 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VenderAndOrderTracker.Models;
+using VendorAndOrderTracker.Models;
 using System.Collections.Generic;
 using System;
 
-namespace VenderAndOrderTracker.Tests
+namespace VendorAndOrderTracker.Tests
 {
-
+  [TestClass]
+  public class VendorTests
+  {
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+  }
 }
