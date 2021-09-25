@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using ProjectName.Models;
+using VenderAndOrderTracker.Models;
 using System;
 
-namespace ProjectName.Tests
+namespace VenderAndOrderTracker.Tests
 {
 
 }

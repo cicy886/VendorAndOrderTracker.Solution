@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using VenderAndOrderTracker.Models;
 
-namespace ProjectName.Controllers
+namespace VenderAndOrderTracker.Controllers
 {
-    public class ClassName1Controller : Controller { 
+    public class VendersController : Controller { 
     
     }
 }
