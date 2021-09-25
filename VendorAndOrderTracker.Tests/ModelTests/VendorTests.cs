@@ -23,7 +23,7 @@ namespace VendorAndOrderTracker.Tests
             Vendor newVendor = new Vendor(name);
 
             //Act
-            string result = newVender.Name;
+            string result = newVendor.Name;
 
             //Assert
             Assert.AreEqual (name, result);
