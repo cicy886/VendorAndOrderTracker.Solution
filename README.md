@@ -27,7 +27,8 @@ ___________
 4. Run **$dotnet test** in **VendorAndOrderTracker.Tests** directory to test the project functionality
 
 ## Known Bugs
-Order list is not displaying correctly
+* Order list is not displaying correctly
+* Order detail list is not desplaying correctly
 
 ## GitHub page website
 [https://cicy886.github.io/VendorAndOrderTracker.Solution/](https://cicy886.github.io/VendorAndOrderTracker.Solution/)
