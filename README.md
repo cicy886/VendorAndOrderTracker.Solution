@@ -14,6 +14,7 @@ ___________
 * The user can create a new order by clicking the *add a new order*.
 * When the user fills out the form and clicks to the *add order* button, the user is routed to the order list page.
 * From the order list page, the user can click on *Return to vendor list* or the *Return to main page* or can *add a new order*.
+* A user can keep track of the name and the description of vendors, and title, description, price, date of orders.
 
 
 ## Technologies Used
@@ -27,8 +28,7 @@ ___________
 4. Run **$dotnet test** in **VendorAndOrderTracker.Tests** directory to test the project functionality
 
 ## Known Bugs
-* Order list is not displaying correctly
-* Order detail list is not desplaying correctly
+No known bugs found
 
 ## GitHub page website
 [https://cicy886.github.io/VendorAndOrderTracker.Solution/](https://cicy886.github.io/VendorAndOrderTracker.Solution/)
