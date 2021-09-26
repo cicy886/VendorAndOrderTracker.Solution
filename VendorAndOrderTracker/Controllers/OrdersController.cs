@@ -16,5 +16,12 @@ namespace VenderAndOrderTracker.Controllers
             model.Add("vendor", vendor);
             return View(model);
         }
+
+        [HttpGet("/vendors/{vendorId}/orders/new")]
+        public ActionResult New(int vendorId)
+        {
+            Vendor vendor = Vendor.Find(vendorId);
+            return View(vendor);
+        }
     }
 }
