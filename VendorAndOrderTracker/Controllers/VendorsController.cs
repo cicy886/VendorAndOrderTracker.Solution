@@ -5,7 +5,13 @@ using VendorAndOrderTracker.Models;
 
 namespace VendorAndOrderTracker.Controllers
 {
-    public class VendorsController : Controller { 
-    
+    public class VendorsController : Controller
+    {
+        [HttpGet("/vendors")]
+        public ActionResult Index()
+        {
+            List<Vendor> allVendors = Vendor.GetAll();
+            return View(allVendors);
+        }
     }
 }
