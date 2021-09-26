@@ -4,8 +4,8 @@ namespace VendorAndOrderTracker.Models
 {
     public class Order
     {
-        public string Description { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
         public string Price { get; set; }
         public string Date { get; set; }
 
@@ -13,10 +13,10 @@ namespace VendorAndOrderTracker.Models
 
         private static List<Order> _instances = new List<Order> { };
 
-        public Order(string description, string title, string price, string date)
+        public Order(string title,string description, string price, string date)
         {
-            Description = description;
             Title = title;
+            Description = description;
             Price = price;
             Date = date;
             _instances.Add(this);
