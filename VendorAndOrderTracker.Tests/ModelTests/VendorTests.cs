@@ -16,7 +16,7 @@ namespace VendorAndOrderTracker.Tests
         [TestMethod]
         public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
         {
-            Vendor newVendor = new Vendor("test vendor");
+            Vendor newVendor = new Vendor("test vendor", "test vendor description");
             Assert.AreEqual(typeof (Vendor), newVendor.GetType());
         }
 
@@ -25,13 +25,16 @@ namespace VendorAndOrderTracker.Tests
         {
             //Arrange
             string name = "Test Vendor";
-            Vendor newVendor = new Vendor(name);
+            string vendorDescription = "Coffee Shop";
+            Vendor newVendor = new Vendor(name, vendorDescription);
 
             //Act
-            string result = newVendor.Name;
+            string result1 = newVendor.Name;
+            string result2 = newVendor.VendorDescription;
 
             //Assert
-            Assert.AreEqual (name, result);
+            Assert.AreEqual (name, result1);
+            Assert.AreEqual(vendorDescription, result2);
         }
 
         [TestMethod]
@@ -39,7 +42,8 @@ namespace VendorAndOrderTracker.Tests
         {
             //Arrange
             string name = "Test Vendor";
-            Vendor newVendor = new Vendor(name);
+            string vendorDescription = " Test Vendor Description";
+            Vendor newVendor = new Vendor(name,vendorDescription);
 
             //Act
             int result = newVendor.Id;
@@ -54,8 +58,10 @@ namespace VendorAndOrderTracker.Tests
             //Arrange
             string name01 = "Suzi's Cafe";
             string name02 = "Starbucks";
-            Vendor newVendor1 = new Vendor(name01);
-            Vendor newVendor2 = new Vendor(name02);
+            string vendorDescription01 = "Coffee Shop";
+            string vendorDescription02 = "Cafeteria";
+            Vendor newVendor1 = new Vendor(name01, vendorDescription01);
+            Vendor newVendor2 = new Vendor(name02, vendorDescription02);
             List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
             //Act
@@ -71,8 +77,10 @@ namespace VendorAndOrderTracker.Tests
             //Arrange
             string name01 = "Suzi's Cafe";
             string name02 = "Starbucks";
-            Vendor newVendor1 = new Vendor(name01);
-            Vendor newVendor2 = new Vendor(name02);
+            string vendorDescription01 = "Coffee Shop";
+            string vendorDescription02 = "Cafeteria";
+            Vendor newVendor1 = new Vendor(name01, vendorDescription01);
+            Vendor newVendor2 = new Vendor(name02, vendorDescription02);
 
             //Act
             Vendor result = Vendor.Find(2);
@@ -85,11 +93,12 @@ namespace VendorAndOrderTracker.Tests
         public void AddOrder_AssociatesOrderWithVendor_OrderList()
         {
             //Arrange
-            // string description = "Scone";
-            Order newOrder = new Order ();
+            string description = "Scone";
+            Order newOrder = new Order (description);
             List<Order> newList = new List<Order> { newOrder };
             string name = "Suzi's Cafe";
-            Vendor newVendor = new Vendor(name);
+            string vendorDescription = "Coffee Shop";
+            Vendor newVendor = new Vendor(name,vendorDescription);
             newVendor.AddOrder (newOrder);
 
             //Act

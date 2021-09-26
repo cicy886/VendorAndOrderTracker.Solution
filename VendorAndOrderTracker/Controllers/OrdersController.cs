@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VendorAndOrderTracker.Models;
 
-namespace VenderAndOrderTracker.Controllers
+namespace VendorAndOrderTracker.Controllers
 {
     public class OrdersController : Controller
     {
@@ -27,7 +27,7 @@ namespace VenderAndOrderTracker.Controllers
         [HttpPost("/orders/delete")]
         public ActionResult DeleteAll()
         {
-            Item.ClearAll();
+            Order.ClearAll();
             return View();
         }
     }
