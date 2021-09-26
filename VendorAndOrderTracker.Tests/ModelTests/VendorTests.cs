@@ -85,8 +85,8 @@ namespace VendorAndOrderTracker.Tests
         public void AddOrder_AssociatesOrderWithVendor_OrderList()
         {
             //Arrange
-            string description = "Scone";
-            Order newOrder = new Order(description);
+            // string description = "Scone";
+            Order newOrder = new Order ();
             List<Order> newList = new List<Order> { newOrder };
             string name = "Suzi's Cafe";
             Vendor newVendor = new Vendor(name);
